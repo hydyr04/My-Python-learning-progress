@@ -1,0 +1,14 @@
+start = int(input("Start: "))
+end = int(input("End: "))
+even = 0
+odd = 0
+print("Numbers:", end=" ")
+for i in range(start, end + 1):
+    print(i, end=" ")
+    if i % 2 == 0:
+        even += 1
+    if i % 2 != 0:
+        odd += 1
+print()
+print(f"Even: {even}") 
+print(f"Odd: {odd}")
