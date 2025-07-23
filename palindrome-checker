@@ -1,0 +1,7 @@
+user = input("Enter text: ")
+user = user.lower()
+user = user.replace(" ", "")
+if user == user[::-1]: 
+    print("It's palindrome")
+else:
+    print("Not a palindrome")
