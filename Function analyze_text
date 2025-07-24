@@ -1,0 +1,7 @@
+def analyze_text(text):
+    if text[0].isupper():
+        return f"Length: {len(text)}, Uppercase: Yes!"
+    else:
+        return f"Length: [{len(text)}, Uppercase: No"
+print(analyze_text("Python"))
+print(analyze_text("java"))
