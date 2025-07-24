@@ -1,0 +1,56 @@
+def add_person(address_book):
+    name = input("Enter name: ")
+    age = int(input("Enter age: "))
+    city = input("Enter city: ")
+    address_book[name] = {"age": age, "city": city}
+    return f"{name} added!"
+
+def remove_person(address_book, name):
+    if name in address_book:
+        removed_value = address_book.pop(name)
+        return f"You've deleted {name} in {removed_value}"
+    else:
+        return "Value not found!"
+
+def get_person(address_book, name):
+    if name in address_book:
+        return address_book[name]
+    else:
+        return "Not found!"
+
+def list_people(address_book):
+    for key, value in address_book.items():
+        print(f"{key}: {value}")
+
+address_book = {}
+
+while True:
+    a = "Add person".lower()
+    b = "Remove person".lower()
+    c = "Get person".lower()
+    d = "Show list".lower()
+    e = "Exit".lower()
+
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    print(e)
+
+    user = input("Choose: ").lower()
+
+    if user == a:
+        print(add_person(address_book))
+    elif user == b:
+        name = input("Enter name to remove: ")
+        print(remove_person(address_book, name))
+    elif user == c:
+        name = input("Enter name to search: ")
+        print(get_person(address_book, name))
+    elif user == d:
+        list_people(address_book)
+    elif user == e:
+        print("Bye")
+        break
+    else:
+        print("Not found!")
