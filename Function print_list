@@ -1,0 +1,6 @@
+def print_list(items):
+    for item in items:
+        print(item)
+
+items = ["apple", "banana", "cherry", "date"]
+print_list(items)
